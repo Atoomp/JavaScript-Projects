@@ -15,3 +15,7 @@ B = "Magnus";
 document.write(A == B);
 document.write(6 > 2 && 9 > 3);
 document.write(2 > 6 || 9> 3);
+
+function not_Function() {
+    document.getElementById("Not").innerHTML = ! (5 > 10);
+}
