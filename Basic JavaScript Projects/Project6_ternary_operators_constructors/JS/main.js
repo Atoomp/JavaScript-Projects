@@ -4,11 +4,11 @@ function Vehicle(Make, Model, Year, Color) {
     this.Vehicle_Year = Year;
     this.Vehicle_Color = Color;
 }
-var Jack = new Vehicle("Dodge", "Viper", 2020, "Red");
-var Emily= new Vehicle("Jeep", "Trail Hawk", 2019, "White and Black");
+var Jack = new Vehicle("Dodeg", "Viper", 2020, "Red");
+var Emily = new Vehicle("Jeep", "Trail Hawk", 2019, "White and Black");
 var Erik = new Vehicle("Ford", "Pinto", 1971, "Mustard");
 function myFunction() {
-    document.getElementById("Keyword_and_Constructors").innerHTML = 
+    document.getElementById("Keywords_and_Constructors").innerHTML = 
     "Erik drives a " + Erik.Vehicle_Color + "-colored " + Erik.Vehicle_Model +
-    " manufactured in " + Erik.Vehicle_Year;
+    "Manufactured in " + Erik.Vehicle_Year;
 }
