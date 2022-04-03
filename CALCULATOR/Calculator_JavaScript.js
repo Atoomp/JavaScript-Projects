@@ -18,7 +18,7 @@ function Input_Digit(digit) {
 
 function Input_Decimal(dot) {
     if (Calculator.Wait_Second_Operand === true) return;
-    if(!Calculator.Display_Value.includes(dot)) {
+    if(Calculator.Display_Value.includes(dot)) {
         Calculator.Display_Value += dot;
     }
 }
@@ -67,7 +67,7 @@ function Handle_Operator(Next_Operator) {
       display.value = Calculator.Display_Value;
   }
   Update_Display();
-  const keys = document.querySelector('.claculator-keys');
+  const keys = document.querySelector('.calculator-keys');
   keys.addEventListener('click', (event) => {
       const { target } = event;
 
@@ -99,6 +99,6 @@ function Handle_Operator(Next_Operator) {
           return;
       }
 
-      Input_Decimal(target.value);
+      Input_Digit(target.value);
       Update_Display();
   })
