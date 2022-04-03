@@ -4,7 +4,7 @@ let activePlayer = 'X';
 let selectedSquares = [];
 
 //This function is for placing an x or o in a square.
-function palceXOrO(squareNumber) {
+function placeXOrO(squareNumber) {
     //This condition ensures a square hasn't been selected already.
     //The .some() method is used to check each element of selectedsquare array
     //to see if it cintains the square number clicked on.
@@ -36,7 +36,7 @@ function palceXOrO(squareNumber) {
 
 
         //This function plays placement sound.
-        Audio('./media/place.mp3');
+        audio('./media/place.mp3');
         //This condition checks to see if it is computers turn.
         if(activePlayer === 'O'){
             //This function disables clicking for computer choice.
@@ -58,9 +58,9 @@ function palceXOrO(squareNumber) {
             //A random number between 0 and 8 is selected.
             pickASquare = String(Math.floor(Math.random() * 9));
             //If the random number evaluated returns true, the square hasn't been selected yet.
-            if (palceXOrO(pickASquare)){
+            if (placeXOrO(pickASquare)){
                 //This line calls the function.
-                palceXOrO(pickASquare);
+                placeXOrO(pickASquare);
                 //This changes our boolean and ends the loop.
                 success = true;
             };
@@ -70,7 +70,7 @@ function palceXOrO(squareNumber) {
 
 //This function parses the selectedSquares array to search for win conditions.
 //drawWinLine function is called to draw line if condition is met.
-function checkWinConditions () {
+function checkWinConditions() {
     //X 0, 1, 2 condition.
     if     (arrayIncludes('0X', '1X', '2X')) { drawWinLine(50, 100, 558, 100) }
     //X 3, 4, 5 condition.
@@ -107,7 +107,7 @@ function checkWinConditions () {
     //squares are selected the code executes.
     else if (selectedSquares.length >= 9) {
         //This function playes the tie game sound.
-        Audio('./media/tie.mp3');
+        audio('./media/tie.mp3');
         //This function sets a .3 second timer before the resetGame is called.
         setTimeout(function () { resetGame(); }, 1000);
     }
@@ -159,7 +159,7 @@ function animateLineDrawing() {
     c.clearRect(0, 0, 608, 608)
     c.beginPath();
     c.moveTo(x1, y1)
-    c.lineWidth(x,y)
+    c.lineTo(x,y)
     c.lineWidth = 10;
     c.strokeStyle = 'rgba(70, 255, 33, .8)';
     c.stroke();
