@@ -22,3 +22,15 @@ function count_Function() {
         return Starting_point;
     }
 }
+
+let age = 18;
+let mesasge;
+
+if (age >= 16) {
+    maessage = 'You can drive.';
+} else {
+    message = 'Your cannot drive.';
+}
+
+
+console.log(message);
