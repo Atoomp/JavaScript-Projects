@@ -1,4 +1,4 @@
-function contdown() {
+function countdown() {
     var seconds = document.getElementById("seconds").value;
 
     function tick() {
