@@ -8,3 +8,10 @@ function My_First_Function() {
 window.alert(Button);
 
 document.write(Button);
+
+function text_color() {
+    var str = "This is the text";
+    str = str.fontcolor("red");
+    document.write(str)
+}
+
