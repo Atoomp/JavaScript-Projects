@@ -13,14 +13,11 @@ function myFunction() {
     "Manufactured in " + Erik.Vehicle_Year;
 }
 
-function count_Function() {
-    document.getElementById("Counting").innerHTML = Count();
-    function Count() {
-        var Starting_point = 9;
-        function Plus_one() {Starting_point += 1;}
-        Plus_one();
-        return Starting_point;
-    }
+function Drive_Function() {
+    var Age, Can_drive;
+    Age = document.getElementById("Age").value;
+    Can_drive = (Age >= 18) ? "You can dirve":"You cannot drive";
+    document.getElementById("Driver").innerHTML = Can_drive + " to drive.";
 }
 
 let age = 18;
