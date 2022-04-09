@@ -13,6 +13,16 @@ function myFunction() {
     "Manufactured in " + Erik.Vehicle_Year;
 }
 
+function count_Function() {
+    document.getElementById("Counting").innerHTML = Count();
+    function Count() {
+        var Starting_point = 9;
+        function Plus_one() {Starting_point += 1;}
+        Plus_one();
+        return Starting_point;
+    }
+}
+
 function Drive_Function() {
     var Age, Can_drive;
     Age = document.getElementById("Age").value;
@@ -21,10 +31,10 @@ function Drive_Function() {
 }
 
 let age = 18;
-let mesasge;
+let message;
 
 if (age >= 16) {
-    maessage = 'You can drive.';
+    message = 'You can drive.';
 } else {
     message = 'Your cannot drive.';
 }
