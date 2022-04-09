@@ -13,10 +13,10 @@
 			</div>
 		<script type="text/javascript">
 			
-            // STEP 1: setup
-            var  ajax = new XMLHttpRequest();
-            
-            // STEP 2: 
+            // STEP 1: 
+            var ajax = new XMLHttpRequest();
+
+            // STEP 2:
             ajax.open('GET', 'content.html');
 
             // STEP 3:
@@ -26,17 +26,11 @@
                 }
             }
 
-            // STEP 4: 
+            // STEP 4:
             function getContent() {
                 ajax.send();
                 document.getElementById('btn_content').style.display = 'none';
             }
-
-
-
-
-
-
 
 		</script>
     </body>
